@@ -293,7 +293,7 @@ for all $n$, so we see that the inclusion is not compact.
 there exists a constant $C$ such that $||f_n||_{H^s(K)} \leq C$ for all $n \in 
 \mathbb{N}$. Then,
 \eQb
-||\hat{f_n}||_L^{\infty}} &\leq& (2\pi)^{\dfrac{d}{2}} \sqrt{m(K)} \sup_{n} 
+||\hat{f_n}||_L^{\infty} &\leq& (2\pi)^{\dfrac{d}{2}} \sqrt{m(K)} \sup_{n} 
 ||f_n||_{H^s(K)} < \infty
 \eQe
 for all $n$. Furthermore, for any $\xi_1, \xi_2 \in \mathbb{R}^d$, and $n \in 
@@ -306,9 +306,37 @@ for all $n$. Furthermore, for any $\xi_1, \xi_2 \in \mathbb{R}^d$, and $n \in
 Therefore, $\{\hat{f_n}\}$ is uniformly bounded on a compact set, and
 equicontinuous. Now, upto diagonal extraction, we have a subsequence 
 denoted as $\{ \hat{f_n} \}$, which converges uniformly on $B(0,k)$ for all $k$. 
+Let $g$ be defined by a.e. convergence of $\{\hat{f_n}\}$. Fix $\delta > 0$.
+Choose $N$ large enough such that 
+\eQb
+\dfrac{1}{(1+N^2)^{\epsilon}} \leq \dfrac{\delta}{\delta \sup_n ||f_n||_{H_s}^{2}} 
+\>\>\> \text{and} \>\>\> \int <\xi>^{2s -2\epsilon} |g|^2 X_{B(0,N)^c} < \delta.
+\eQe 
+and hence
+\eQb
+||f_n||_{H^{s-\epsilon}}^2 &\leq& \int <\xi>^{2s - 2\epsilon} X_{B(0,N)} |
+\hat{f_n} - \hat{f}|^2 + 2\int <\xi>^{2s -2\epsilon} X_{B(0,N)^c} 
+|\hat{f_n}|^2 |g|^2) \leq C\delta. 
+\eQe
+So the embedding is compact.
+
 \bigskip
 
-\noindent \textbf{(d)} 
+\noindent \textbf{(d)} Observe that
+\eQb
+\sum <\xi>^{2s - 2\epsilon} |\hat{f}(\xi) - \hat{f_n}(\xi)|^2 
+&\leq& \sum_{\xi| \leq N} + 2\sum_{|\xi| > N} <\xi>^{2s-2\epsilon} |\hat{f}(\xi)|^2
++ 2\sum_{|\xi|>N} <\xi>^{2s} |\hat{f_n}(\xi)|^2 \dfrac{1}{(1+N^2)^\epsilon}
+\eQe 
+for all $n$. Therefore, it's again enough to choose for fixed $\delta > 0$, large
+enough $N$ such that
+\eQb
+\dfrac{\sup_n ||f_n||_{H_s}^2}{(1+N^2)^{\epsilon}} < \dfrac{\delta}{8} \>\>\> \text{and}
+\sum_{|\xi|>N} <\xi>^{2s - 2\epsilon} |\hat{f}(\xi)|^2 < \dfrac{\delta}{8} . 
+\eQe
+This can be done in the analogous way with part c, by employing
+ Weistrauss theorem and diagonal extraction.
+\hfill $\qed$
 
 \end{solution}
 \end{document}
