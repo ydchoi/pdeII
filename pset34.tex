@@ -293,9 +293,19 @@ for all $n$, so we see that the inclusion is not compact.
 there exists a constant $C$ such that $||f_n||_{H^s(K)} \leq C$ for all $n \in 
 \mathbb{N}$. Then,
 \eQb
-|\hat{f_n}(\xi + \delta) - \hat{f_n}(\xi)| &\le& `
+||\hat{f_n}||_L^{\infty}} &\leq& (2\pi)^{\dfrac{d}{2}} \sqrt{m(K)} \sup_{n} 
+||f_n||_{H^s(K)} < \infty
 \eQe
-
+for all $n$. Furthermore, for any $\xi_1, \xi_2 \in \mathbb{R}^d$, and $n \in 
+\mathbb{N}$, 
+\eQb
+|\hat{f_n}(\xi_1) - \hat{f_n}(\xi_2)| &=& C |\int_{K} (e^{-i\xi_1 \cdot x} 
+- e^{-i \xi_2 \cdot x}) f_n(x) dx | \\ 
+&\leq& C \int_{K} |f_n| |\xi_1 - \xi_2| |x| dx \leq C|\xi_1 - \xi_2|. \\ 
+\eQe
+Therefore, $\{\hat{f_n}\}$ is uniformly bounded on a compact set, and
+equicontinuous. Now, upto diagonal extraction, we have a subsequence 
+denoted as $\{ \hat{f_n} \}$, which converges uniformly on $B(0,k)$ for all $k$. 
 \bigskip
 
 \noindent \textbf{(d)} 
